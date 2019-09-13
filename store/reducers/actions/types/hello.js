@@ -1,4 +1,4 @@
-const GREET = 'GREET'
+export const GREET = 'GREET'
 
 export {
     GREET

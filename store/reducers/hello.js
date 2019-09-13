@@ -4,7 +4,7 @@ const initialState = {
 }
 
 const reducers = {
-    [Types.GREET]: (state = initialState, payload) => ({...state, message: payload})
+    [Types.GREET]: (state, payload) => ({...state, message: payload})
 };
 
 export default (state = initialState, action) => reducers[action.type] ? reducers[action.type](action.payload) : state;
