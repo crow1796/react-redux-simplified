@@ -1,8 +1,8 @@
 # Redux. Simplified.
 
 ### How to use
-1. Clone or Download this repo.
-2. Copy and Paste the `store/` directory into your project.
+1. Clone or Download this repo
+2. Copy and Paste the `store/` directory into your project
 3. In your main React file, just import the `store`.
 ```js
 import store from './store'
@@ -18,36 +18,34 @@ function App() {
 ```
 
 ### Creating Modules
-1. To create modules you must first create its constant action types inside the `reducers/actions/types/` directory.
+To create modules you only need to create files inside the `store/reducers/` directory. It will then have a content like this
 ```js
-export const GREET = 'GREET'
-```
-2. Then create the actions in `reducers/actions/` directory.
-```js
-import * as Types from './types/hello'
-
-export greet = (name) => {
-    return {
-        type: Types.GREET,
-        payload: name
-    }
+const Types = {
+    GREET: 'GREET'
 }
-```
-3. Now it's time to create the reducer.
-```js
-import * as Types from './actions/types/hello'
+
 const initialState = {
     message: null
 }
 
 const reducers = {
-    [Types.GREET]: (state = initialState, payload) => ({...state, message: 'Hello, ' + payload})
+    [Types.GREET]: (state, payload) => ({...state, message: payload})
 }
 
-export default (state = initialState, action) => reducers[action.type] ? reducers[action.type](action.payload) : state
-```
+const actions = {
+    greet(){
+        return {
+            type: Types.GREET
+        }
+    }
+}
 
-Just easy as that, no more switch statements.
+export {
+    initialState,
+    reducers,
+    actions
+}
+```
 
 ### Using the modules
 To use the modules inside the containers we can now do it like this:

@@ -1,4 +1,7 @@
-import * as Types from './actions/types/hello'
+const Types = {
+    GREET: 'GREET'
+}
+
 const initialState = {
     message: null
 }
@@ -7,4 +10,16 @@ const reducers = {
     [Types.GREET]: (state, payload) => ({...state, message: payload})
 };
 
-export default (state = initialState, action) => reducers[action.type] ? reducers[action.type](action.payload) : state;
+const actions = {
+    greet(){
+        return {
+            type: Types.GREET
+        }
+    }
+}
+
+export {
+    initialState,
+    reducers,
+    actions
+}
