@@ -1,8 +1,8 @@
 # Redux. Simplified.
 
 ### How to use
-1. Clone or Download this repo
-2. Copy and Paste the `store/` directory into your project
+1. Clone or Download this repo.
+2. Copy and Paste the `store/` directory into your project.
 3. In your main React file, just import the `store`.
 ```js
 import store from './store'
