@@ -3,16 +3,8 @@ const initialState = {
     message: null
 }
 
-const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case Types.GREET:
-            return {
-                ...state,
-                message: action.payload
-            }
-        default:
-            return state
-    }
-}
+const reducers = {
+    [Types.GREET]: (state = initialState, payload) => ({...state, message: payload})
+};
 
-export default reducer
+export default (state = initialState, action) => reducers[action.type] ? reducers[action.type](action.payload) : state;
