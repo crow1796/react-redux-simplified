@@ -84,4 +84,6 @@ const mapDispatchToProps = dispatchToPropsMapper({
 export default connect(mapStateToProps, mapDispatchToProps)(MyComponent)
 ```
 
-Notice that we don't have to import anymore all of the actions that we are to using inside this container.Instead we only import the new helpers `dispatchToPropsMapper` and `stateToPropsMapper` and it doesn't matter if the action has arguments because all of the passed arguments will be injected immediately if there are any.
+Notice that we don't have to import the actions that we are to using inside this container anymore.Instead we only import the new helpers `dispatchToPropsMapper` and `stateToPropsMapper`.
+
+And it doesn't matter if the action has arguments because all of the passed arguments when calling the action will be automatically injected to it.
