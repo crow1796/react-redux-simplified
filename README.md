@@ -18,7 +18,7 @@ function App() {
 ```
 
 ### Creating Modules
-To create modules you only need to create files inside the `store/reducers/` directory. It will then have a content like this
+To create modules you only need to create files inside the `store/modules/` directory. It will then have a content like this
 ```js
 const Types = {
     GREET: 'GREET'
@@ -74,7 +74,7 @@ const mapStateToProps = stateToPropsMapper({
     message: 'hello/message'
 });
 
-// This helper will look for the method inside the 'store/reducers/actions/' directory.
+// This helper will look for the method inside the 'store/modules/' directory and inside the actions property.
 const mapDispatchToProps = dispatchToPropsMapper({
     greet: 'hello/greet'
 });

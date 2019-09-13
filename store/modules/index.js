@@ -1,5 +1,5 @@
 import { combineReducers } from 'redux';
-const files = require.context('./../reducers', false, /\.js$/);
+const files = require.context('./', false, /\.js$/);
 const modules = {};
 
 files.keys().forEach(key => {

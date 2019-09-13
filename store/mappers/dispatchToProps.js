@@ -1,5 +1,5 @@
 import { extractActionAndParamsFrom } from './utils'
-const files = require.context('./../reducers', false, /\.js$/);
+const files = require.context('./../modules', false, /\.js$/);
 const modules = {};
 
 files.keys().forEach(key => {
