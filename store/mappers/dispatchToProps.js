@@ -1,4 +1,4 @@
-import { extractActionAndParamsFrom } from './utils'
+import { extractActionAndParamsFrom } from './_utils'
 const files = require.context('./../modules', false, /\.js$/);
 const modules = {};
 
