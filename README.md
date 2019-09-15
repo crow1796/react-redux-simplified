@@ -86,5 +86,9 @@ Notice that we don't have to import the actions that we are to using inside this
 
 And it doesn't matter if the action has arguments because all of the passed arguments when calling the action will be automatically injected to it.
 
+### Example With Redux Thunk and Axios
+Store: https://github.com/crow1796/ccnquotes/blob/master/src/store/index.js
+Module: https://github.com/crow1796/ccnquotes/blob/master/src/store/modules/quotes.js
+
 ### LICENSE
 MIT
