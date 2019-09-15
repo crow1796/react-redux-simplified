@@ -88,6 +88,7 @@ And it doesn't matter if the action has arguments because all of the passed argu
 
 ### Example With Redux Thunk and Axios
 Store: https://github.com/crow1796/ccnquotes/blob/master/src/store/index.js
+
 Module: https://github.com/crow1796/ccnquotes/blob/master/src/store/modules/quotes.js
 
 ### LICENSE
