@@ -30,7 +30,7 @@ const state = {
 
 const actions = {
     greet: {
-        // The return value will be passed to the `reducer` as the payload
+        // The returned value will be passed to the `reducer` as its payload
         handler(params){
             return params
         },
