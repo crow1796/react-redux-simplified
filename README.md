@@ -1,5 +1,9 @@
 # Redux. Simplified.
 
+`
+Note: This repo uses redux-thunk. So you might as well install redux-thunk in your project or any redux middleware that returns function that dispatches action types in actions.
+`
+
 ### How to use
 1. Clone or Download this repo
 2. Copy and Paste the `store/` directory into your project
@@ -18,34 +22,31 @@ function App() {
 ```
 
 ### Creating Modules
-To create modules you only need to create files inside the `store/modules/` directory. It will then have a content like this
+To create modules you only need to create files inside the `store/modules/` directory which will then have a content like this
 ```js
-const Types = {
-    GREET: 'GREET'
-}
-
 const initialState = {
     message: null
 }
 
-const reducers = {
-    [Types.GREET]: (state, payload) => ({...state, message: payload})
-}
-
 const actions = {
-    greet(){
-        return {
-            type: Types.GREET
+    greet: {
+        // The return value will be passed to the `reducer` as the payload
+        handler(params){
+            return params
+        },
+        // The state will be the `initialState`
+        reducer(state, payload){
+            return {...state, params}
         }
     }
 }
 
 export {
     initialState,
-    reducers,
     actions
 }
 ```
+We don't need to create action types anymore.
 
 ### Using the modules
 To use the modules inside the containers we can now do it like this:
