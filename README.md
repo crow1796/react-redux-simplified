@@ -1,7 +1,7 @@
 # Reduexx
 
 `
-Note: This repo uses redux-thunk. So you might as well install redux-thunk in your project or any redux middleware that returns function that dispatches action types in actions.
+Note: This template uses redux-thunk. So you might as well install redux-thunk in your project or any redux middleware that returns function that dispatches action types in actions.
 `
 
 ### How to use
