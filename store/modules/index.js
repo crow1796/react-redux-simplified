@@ -13,7 +13,7 @@ files.keys().forEach(key => {
         let actionType = `${createActionTypeFor(formattedName)}::${createActionTypeFor(action)}`
         reducers[actionType] = actions[action].reducer
     })
-    let initialState = mod.initialState || {}
+    let initialState = mod.state || {}
     modules[formattedName] = (state = initialState, action) => reducers[action.type] ? reducers[action.type](state, action.payload) : state
 })
 

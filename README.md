@@ -1,4 +1,4 @@
-# Redux. Simplified.
+# Reduex
 
 `
 Note: This repo uses redux-thunk. So you might as well install redux-thunk in your project or any redux middleware that returns function that dispatches action types in actions.
@@ -24,7 +24,7 @@ function App() {
 ### Creating Modules
 To create modules you only need to create files inside the `store/modules/` directory which will then have a content like this
 ```js
-const initialState = {
+const state = {
     message: null
 }
 
@@ -34,7 +34,7 @@ const actions = {
         handler(params){
             return params
         },
-        // The state will be the `initialState`
+        // The state will be the `state`
         reducer(state, payload){
             return {...state, params}
         }
@@ -42,7 +42,7 @@ const actions = {
 }
 
 export {
-    initialState,
+    state,
     actions
 }
 ```

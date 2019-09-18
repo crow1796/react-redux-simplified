@@ -1,4 +1,4 @@
-const initialState = {
+const state = {
     message: null
 }
 
@@ -14,6 +14,6 @@ const actions = {
 }
 
 export {
-    initialState,
+    state,
     actions
 }
