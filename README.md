@@ -89,6 +89,7 @@ And it doesn't matter if the action has arguments because all of the passed argu
 
 ### Examples
 Module: https://github.com/crow1796/tailwind-studio/blob/master/store/modules/studio.js
+
 Usage: https://github.com/crow1796/tailwind-studio/blob/master/pages/index.js
 
 ### LICENSE
