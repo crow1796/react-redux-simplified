@@ -8,7 +8,7 @@ const actions = {
 
         },
         reducer(state, payload){
-            ({ ...state, message: payload })
+            return ({ ...state, message: payload })
         }
     }
 }
