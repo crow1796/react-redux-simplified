@@ -1,8 +1,6 @@
 # Reduexx
 
-`
-Note: This template uses redux-thunk. So you might as well install redux-thunk in your project or any redux middleware that returns function that dispatches action types inside the actions.
-`
+> Note: This template uses redux-thunk. So you might as well install redux-thunk in your project or any redux middleware that returns function that dispatches action types inside the actions.
 
 ### How to use
 1. Clone or Download this repo
